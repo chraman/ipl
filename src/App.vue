@@ -1,11 +1,15 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <router-view></router-view>
+    <dashboard></dashboard>
   </div>
 </template>
 
 <script>
+
+import Vue from 'vue'
+import Dashboard from '@/components/Dashboard'
+Vue.component('dashboard', Dashboard)
 export default {
   name: 'app'
 }
