@@ -1,10 +1,15 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <pie></pie>
     </div>
 </template>
 
 <script>
+import Vue from 'vue'
+import pie from '@/components/pie.js'
+Vue.component('pie', pie)
+console.log(pie)
 export default {
   name: 'dasboard',
   data () {
