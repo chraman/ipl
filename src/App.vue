@@ -3,19 +3,18 @@
   <div class="row panel-header">
   	<div  class="container">
   		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
-  		<div class="panel-heading">
-  		<div class="app-image">
-  		 <img style="width:100px" src="./assets/logo.png">
-  		</div>
-  		<div class="app-header">
-  			<h1 class="heading">{{ heading }}</h1>
-  		</div>
-  		</div>
+  			<div class="panel-heading">
+  				<div class="app-image">
+  		 			<img style="width:100px" src="./assets/logo.png">
+  				</div>
+  			<div class="app-header">
+  				<h1 class="heading">{{ heading }}</h1>
+  			</div>
+  			</div>
   		</div>
   	</div>
   </div>
-    
-    <dashboard></dashboard>
+  	<dashboard></dashboard>
   </div>
 </template>
 
