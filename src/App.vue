@@ -3,7 +3,7 @@
   <div class="row panel-header">
   	<div  class="container">
   		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
-  			<div class="panel-heading">
+  			<div class="app-panel-heading">
   				<div class="app-image">
   		 			<img style="width:100px" src="./assets/logo.png">
   				</div>
@@ -48,16 +48,14 @@ export default {
 	padding: 8px;
     display: inline-block;
     background: white;
-    /* margin-right: 14px; */
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
 }
-
 .panel-header {
 	background: #19388A;
 	    padding: 7px;
 }
-.panel-heading{ 
+.app-panel-heading{ 
 	background: white;
 	    padding-top: 0px;
     padding-bottom: 0px;
