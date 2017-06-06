@@ -34,6 +34,9 @@ export default {
 </script>
 
 <style>
+#app {
+	min-width: 380px;
+}
 .app-header{
 	position: absolute;
     padding-left: 12px;
