@@ -5,7 +5,7 @@
         <h1>Tournament Stats</h1>
 		<div>
         <table class="table table-striped table-bordered">
-          <tr>
+          <tr class="table-header">
             <th>Matches</th>
             <th>Runs</th>
             <th>Wickets</th>
@@ -55,6 +55,17 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.table-header{
+  background-color: #f9f9f9;
+}
+td {
+ padding: 6px !important;
+    border: 1px solid #ddd;
+}
+th {
+  padding: 6px !important;
+    border: 1px solid #ddd;
+}
 h1, h2 {
   font-weight: normal;
 }
