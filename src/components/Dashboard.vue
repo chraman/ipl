@@ -29,11 +29,14 @@
         <pie></pie>
       </div>
       <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
-        <h1>Or chasing taget wins you the match?</h1>
+        <h1>Or chasing target wins you the match?</h1>
       </div>
       <div style="display:inline-block;" class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
         <pie></pie>
       </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <max-dots-baller></max-dots-baller>
     </div>
   </div>
 </template>
@@ -41,8 +44,9 @@
 <script>
 import Vue from 'vue'
 import pie from '@/components/pie.js'
+import MaxDotsBaller from '@/components/MaxDotsBaller'
 Vue.component('pie', pie)
-console.log(pie)
+Vue.component('max-dots-baller', MaxDotsBaller)
 export default {
   name: 'dasboard',
   data () {
