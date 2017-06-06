@@ -1,0 +1,4 @@
+{
+	"sixes" : [{"batsman":"CH Gayle","batsman_runs":6,"count":252},{"batsman":"RG Sharma","batsman_runs":6,"count":164},{"batsman":"SK Raina","batsman_runs":6,"count":161},{"batsman":"V Kohli","batsman_runs":6,"count":149},{"batsman":"YK Pathan","batsman_runs":6,"count":143},{"batsman":"AB de Villiers","batsman_runs":6,"count":142},{"batsman":"MS Dhoni","batsman_runs":6,"count":140},{"batsman":"DA Warner","batsman_runs":6,"count":134}],
+	"runs" : [{"batsman":"V Kohli","count":4115},{"batsman":"SK Raina","count":4106},{"batsman":"RG Sharma","count":3874},{"batsman":"G Gambhir","count":3634},{"batsman":"CH Gayle","count":3451},{"batsman":"RV Uthappa","count":3390},{"batsman":"DA Warner","count":3373},{"batsman":"MS Dhoni","count":3270},{"batsman":"AB de Villiers","count":3270},{"batsman":"S Dhawan","count":3082},{"batsman":"YK Pathan","count":2779},{"batsman":"V Sehwag","count":2728}]
+}
