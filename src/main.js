@@ -8,25 +8,6 @@ import VueResource from 'vue-resource'
 import Backbone from 'backbone'
 Vue.use(VueResource);
 
-var Item = Backbone.Model.extend();
-var List = Backbone.Collection.extend({
-    model: Item,
-
-    url: "https://chraman.github.io/ipl/static/matches.json",
-
-    parse: function(response) {
-        return response.results;
-    }
-});
-
-var list = new List();
-list.fetch().then(
-  (response)=>{
-  console.log(response)
-  },
-  (error) => {
-    console.log(error)
-  })
 
 
 Vue.config.productionTip = false

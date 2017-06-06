@@ -12,10 +12,10 @@
             <th>Sixes</th>
           </tr>
           <tr>
-            <td>577</td>
-            <td>1022012</td>
-            <td>10000</td>
-            <td>20000</td>
+            <td>{{ matches }}</td>
+            <td>{{ runs }}</td>
+            <td>{{ wickets }}</td>
+            <td>{{ sixes  }}</td>
           </tr>
         </table>
 		</div>
@@ -31,12 +31,15 @@
       <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
         <h1>Or chasing target wins you the match?</h1>
       </div>
-      <div style="display:inline-block;" class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+      <div style="display:inline-block;" class="col-lg-4 col-md-4 col-sm-6 col-xs-12 pt-20">
         <pie></pie>
       </div>
     </div>
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-      <max-dots-baller></max-dots-baller>
+    <div class="row pt-20">
+      <bowler-stats></bowler-stats>
+    </div>
+    <div class="row pt-20">
+      <batsman-stats></batsman-stats>
     </div>
   </div>
 </template>
@@ -44,16 +47,44 @@
 <script>
 import Vue from 'vue'
 import pie from '@/components/pie.js'
-import MaxDotsBaller from '@/components/MaxDotsBaller'
+import BowlerStats from '@/components/BowlerStats'
+import BatsmanStats from '@/components/BatsmanStats'
 Vue.component('pie', pie)
-Vue.component('max-dots-baller', MaxDotsBaller)
+Vue.component('bowler-stats', BowlerStats)
+Vue.component('batsman-stats', BatsmanStats)
+
+
 export default {
   name: 'dasboard',
   data () {
     return {
-      msg: 'IPL Dashboard'
+      msg: 'IPL Dashboard',
+      matches:'',
+      sixes:'',
+      runs:'',
+      wickets:''
     }
-  }
+  },
+  mounted() {
+    console.log(this.msg)
+    this.update()
+  },
+  methods: {
+        update: function() {
+          this.$http.get("https://chraman.github.io/ipl/static/json/iplStats.json").then(
+            function(response) {
+                var stats = response.body
+                this.matches = stats.matches
+                this.sixes = stats.sixes
+                this.runs = stats.runs
+                this.wickets = stats.wickets
+                console.log(stats)
+            }, function(error) {
+                console.log(error)
+          });
+        }
+    }
+
 }
 </script>
 
@@ -86,5 +117,8 @@ li {
 
 a {
   color: #42b983;
+}
+.pt-20{
+  padding-top:20px;
 }
 </style>
