@@ -1,9 +1,7 @@
 <template>
-  <div class="container">
-  <div class="row">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <h1>Tournament Stats</h1>
-		<div>
+  <div>
+      <h1>Tournament Stats</h1>
+		  <div>
         <table class="table table-striped table-bordered">
           <tr class="table-header">
             <th>Matches</th>
@@ -19,8 +17,6 @@
           </tr>
         </table>
 		</div>
-      </div>
- </div>
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
       <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
         <h1>Does winning toss wins you the match?</h1>
@@ -34,12 +30,6 @@
       <div style="display:inline-block;" class="col-lg-4 col-md-4 col-sm-6 col-xs-12 pt-20">
         <pie></pie>
       </div>
-    </div>
-    <div class="row pt-20">
-      <bowler-stats></bowler-stats>
-    </div>
-    <div class="row pt-20">
-      <batsman-stats></batsman-stats>
     </div>
   </div>
 </template>
@@ -90,6 +80,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.dashboard {
+  border-right:5px solid #008747;
+}
 .table-header{
   background-color: #f9f9f9;
 }
