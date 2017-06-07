@@ -377,6 +377,11 @@
    },
    {
       "batting_team":"Pune Warriors",
+      "season":2011,
+      "runs_by_season":1775
+   },
+   {
+      "batting_team":"Pune Warriors",
       "season":2012,
       "runs_by_season":2321
    },
