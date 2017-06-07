@@ -41,6 +41,11 @@
       "runs_by_season":2725
    },
    {
+      "batting_team":"Chennai Super Kings",
+      "season":2016,
+      "runs_by_season":0
+   },
+   {
       "batting_team":"Deccan Chargers",
       "season":2008,
       "runs_by_season":2229
@@ -64,6 +69,26 @@
       "batting_team":"Deccan Chargers",
       "season":2012,
       "runs_by_season":2312
+   },
+   {
+      "batting_team":"Deccan Chargers",
+      "season":2013,
+      "runs_by_season":0
+   },
+   {
+      "batting_team":"Deccan Chargers",
+      "season":2014,
+      "runs_by_season":0
+   },
+   {
+      "batting_team":"Deccan Chargers",
+      "season":2015,
+      "runs_by_season":0
+   },
+   {
+      "batting_team":"Deccan Chargers",
+      "season":2016,
+      "runs_by_season":0
    },
    {
       "batting_team":"Delhi Daredevils",
@@ -109,6 +134,46 @@
       "batting_team":"Delhi Daredevils",
       "season":2016,
       "runs_by_season":2104
+   },
+   {
+      "batting_team":"Gujarat Lions",
+      "season":2008,
+      "runs_by_season":0
+   },
+   {
+      "batting_team":"Gujarat Lions",
+      "season":2009,
+      "runs_by_season":0
+   },
+   {
+      "batting_team":"Gujarat Lions",
+      "season":2010,
+      "runs_by_season":0
+   },
+   {
+      "batting_team":"Gujarat Lions",
+      "season":2011,
+      "runs_by_season":0
+   },
+   {
+      "batting_team":"Gujarat Lions",
+      "season":2012,
+      "runs_by_season":0
+   },
+   {
+      "batting_team":"Gujarat Lions",
+      "season":2013,
+      "runs_by_season":0
+   },
+   {
+      "batting_team":"Gujarat Lions",
+      "season":2014,
+      "runs_by_season":0
+   },
+   {
+      "batting_team":"Gujarat Lions",
+      "season":2015,
+      "runs_by_season":0
    },
    {
       "batting_team":"Gujarat Lions",
@@ -162,8 +227,48 @@
    },
    {
       "batting_team":"Kochi Tuskers Kerala",
+      "season":2008,
+      "runs_by_season":0
+   },
+   {
+      "batting_team":"Kochi Tuskers Kerala",
+      "season":2009,
+      "runs_by_season":0
+   },
+   {
+      "batting_team":"Kochi Tuskers Kerala",
+      "season":2010,
+      "runs_by_season":0
+   },
+   {
+      "batting_team":"Kochi Tuskers Kerala",
       "season":2011,
       "runs_by_season":1901
+   },
+   {
+      "batting_team":"Kochi Tuskers Kerala",
+      "season":2012,
+      "runs_by_season":0
+   },
+   {
+      "batting_team":"Kochi Tuskers Kerala",
+      "season":2013,
+      "runs_by_season":0
+   },
+   {
+      "batting_team":"Kochi Tuskers Kerala",
+      "season":2014,
+      "runs_by_season":0
+   },
+   {
+      "batting_team":"Kochi Tuskers Kerala",
+      "season":2015,
+      "runs_by_season":0
+   },
+   {
+      "batting_team":"Kochi Tuskers Kerala",
+      "season":2016,
+      "runs_by_season":0
    },
    {
       "batting_team":"Kolkata Knight Riders",
@@ -257,8 +362,18 @@
    },
    {
       "batting_team":"Pune Warriors",
-      "season":2011,
-      "runs_by_season":1775
+      "season":2008,
+      "runs_by_season":0
+   },
+   {
+      "batting_team":"Pune Warriors",
+      "season":2009,
+      "runs_by_season":0
+   },
+   {
+      "batting_team":"Pune Warriors",
+      "season":2010,
+      "runs_by_season":0
    },
    {
       "batting_team":"Pune Warriors",
@@ -269,6 +384,21 @@
       "batting_team":"Pune Warriors",
       "season":2013,
       "runs_by_season":2262
+   },
+   {
+      "batting_team":"Pune Warriors",
+      "season":2014,
+      "runs_by_season":0
+   },
+   {
+      "batting_team":"Pune Warriors",
+      "season":2015,
+      "runs_by_season":0
+   },
+   {
+      "batting_team":"Pune Warriors",
+      "season":2016,
+      "runs_by_season":0
    },
    {
       "batting_team":"Rajasthan Royals",
@@ -309,6 +439,51 @@
       "batting_team":"Rajasthan Royals",
       "season":2015,
       "runs_by_season":2143
+   },
+   {
+      "batting_team":"Rajasthan Royals",
+      "season":2016,
+      "runs_by_season":0
+   },
+   {
+      "batting_team":"Rising Pune Supergiants",
+      "season":2008,
+      "runs_by_season":0
+   },
+   {
+      "batting_team":"Rising Pune Supergiants",
+      "season":2009,
+      "runs_by_season":0
+   },
+   {
+      "batting_team":"Rising Pune Supergiants",
+      "season":2010,
+      "runs_by_season":0
+   },
+   {
+      "batting_team":"Rising Pune Supergiants",
+      "season":2011,
+      "runs_by_season":0
+   },
+   {
+      "batting_team":"Rising Pune Supergiants",
+      "season":2012,
+      "runs_by_season":0
+   },
+   {
+      "batting_team":"Rising Pune Supergiants",
+      "season":2013,
+      "runs_by_season":0
+   },
+   {
+      "batting_team":"Rising Pune Supergiants",
+      "season":2014,
+      "runs_by_season":0
+   },
+   {
+      "batting_team":"Rising Pune Supergiants",
+      "season":2015,
+      "runs_by_season":0
    },
    {
       "batting_team":"Rising Pune Supergiants",
@@ -359,6 +534,31 @@
       "batting_team":"Royal Challengers Bangalore",
       "season":2016,
       "runs_by_season":2981
+   },
+   {
+      "batting_team":"Sunrisers Hyderabad",
+      "season":2008,
+      "runs_by_season":0
+   },
+   {
+      "batting_team":"Sunrisers Hyderabad",
+      "season":2009,
+      "runs_by_season":0
+   },
+   {
+      "batting_team":"Sunrisers Hyderabad",
+      "season":2010,
+      "runs_by_season":0
+   },
+   {
+      "batting_team":"Sunrisers Hyderabad",
+      "season":2011,
+      "runs_by_season":0
+   },
+   {
+      "batting_team":"Sunrisers Hyderabad",
+      "season":2012,
+      "runs_by_season":0
    },
    {
       "batting_team":"Sunrisers Hyderabad",
