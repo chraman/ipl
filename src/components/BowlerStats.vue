@@ -44,7 +44,6 @@ export default {
                   this.bowlerWickets.push(players.wickets[i].bowler)
                   this.wickets.push(players.wickets[i].count)
                 }
-                console.log(this.bowlers)
                 this.prepareChartDataDots(this.bowlersDots , this.ballsDots)
                 this.prepareChartDataWickets(this.bowlerWickets , this.wickets)
             }, function(error) {

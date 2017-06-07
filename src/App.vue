@@ -18,10 +18,10 @@
     <div class="wrapper">
       <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 p-0">
       <ul class="form">
-        <li v-on:click="selectedTab=tabs[0]" v-bind:class="selectedTab==tabs[0] ? 'selected':''"><a class="profile"><router-link to="/">Ipl Stats</router-link></a></li>
-        <li v-on:click="selectedTab=tabs[1]" v-bind:class="selectedTab==tabs[1] ? 'selected':''"><a class="messages"><router-link to="/batsmanStats">Batsman Stats</router-link></a></li>
-        <li v-on:click="selectedTab=tabs[2]" v-bind:class="selectedTab==tabs[2] ? 'selected':''"><a class="settings"><router-link to="/bowlerStats">Bowlers Stats</router-link></a></li>
-        <!-- <li><a class="logout">Logout</a></li> -->
+        <li v-on:click="selectedTab=tabs[0]" v-bind:class="selectedTab==tabs[0] ? 'selected':''"><a class="tab1"><router-link to="/">Ipl Stats</router-link></a></li>
+        <li v-on:click="selectedTab=tabs[1]" v-bind:class="selectedTab==tabs[1] ? 'selected':''"><a class="tab2"><router-link to="/tab2">Bowler Stats</router-link></a></li>
+        <li v-on:click="selectedTab=tabs[2]" v-bind:class="selectedTab==tabs[2] ? 'selected':''"><a class="tab3"><router-link to="/tab3">Batsman Stats</router-link></a></li>
+        <li v-on:click="selectedTab=tabs[3]" v-bind:class="selectedTab==tabs[3] ? 'selected':''"><a class="tab4"><router-link to="/tab4">Team Stats</router-link></a></li>
       </ul>
       </div>
       <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 p-0">
@@ -37,6 +37,7 @@
 <script>
 
 import Vue from 'vue'
+import router from './router'
 export default {
   name: 'app',
   data () {
@@ -47,8 +48,8 @@ export default {
     }
   },
   mounted() {
-    this.tabs = ["tab1","tab2","tab3"]
-    this.selectedTab = this.tabs[0]
+    this.tabs = ["tab1","tab2","tab3","tab4"]
+    this.selectedTab = router.history.current.name
   },
 }
 </script>
@@ -111,13 +112,22 @@ ul.form {
     padding:0;
     list-style: none;
     overflow:hidden;
+    border: 1px solid #ddd;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
   }
-
+@media screen and (min-width: 766px) {
+    ul .form {
+      border-radius: 5px;
+    }
+    .router-wrapper{
+      border-right: 5px
+    }
+}
   .form li a {
     padding-left:8px;
-    line-height:50px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     display:block;
     overflow:hidden;
     position:relative;
@@ -136,15 +146,15 @@ ul.form {
     background:#efefef;
   }
 
-  .form li a.profile {
+  .form li a.tab1 {
     border-left:5px solid #008747;
   }
 
-  .form li a.messages {
+  .form li a.tab2 {
       border-left:5px solid #fecf54;
   }
     
-  .form li a.settings {
+  .form li a.tab3 {
       border-left:5px solid #cf2130;
   }
 
@@ -191,8 +201,9 @@ ul.form {
     overflow:hidden;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    border-left: 1px solid #ddd;
+    border: 1px solid #ddd;
     padding: 20px;
     border-right: 5px solid #19388A;
   }
+  @media screen ()
 </style>
