@@ -1228,6 +1228,10 @@
       "runs_by_season": 684
    }, {
       "batting_team": "Rising Pune Supergiants",
+      "batsman_runs": 5,
+      "runs_by_season": 0
+   },{
+      "batting_team": "Rising Pune Supergiants",
       "batsman_runs": 6,
       "runs_by_season": 408
    }, {
