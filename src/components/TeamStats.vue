@@ -217,9 +217,9 @@ export default {
   padding-top:20px !important;
 }
 .mr-0{
-  margin-right:0px;
+  margin-right:0px !important;
 }
 .ml-0{
-  margin-left:0px;
+  margin-left:0px !important;
 }
 </style>
