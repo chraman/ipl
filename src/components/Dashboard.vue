@@ -22,13 +22,13 @@
         <h1>Does winning toss wins you the match?</h1>
       </div>
       <div style="display:inline-block;" class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-        <pie></pie>
+        <pie-chart :chartData="chartDataToss" :options="chartOptions"></pie-chart>
       </div>
       <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
         <h1>Or chasing target wins you the match?</h1>
       </div>
       <div style="display:inline-block;" class="col-lg-4 col-md-4 col-sm-6 col-xs-12 pt-20">
-        <pie></pie>
+        <pie-chart :chartData="chartDataChase" :options="chartOptions"></pie-chart>
       </div>
     </div>
   </div>
@@ -36,10 +36,10 @@
 
 <script>
 import Vue from 'vue'
-import pie from '@/components/pie.js'
+import PieChart from '@/components/PieChart.js'
 import BowlerStats from '@/components/BowlerStats'
 import BatsmanStats from '@/components/BatsmanStats'
-Vue.component('pie', pie)
+Vue.component('pie-chart', PieChart)
 Vue.component('bowler-stats', BowlerStats)
 Vue.component('batsman-stats', BatsmanStats)
 
@@ -52,7 +52,10 @@ export default {
       matches:'',
       sixes:'',
       runs:'',
-      wickets:''
+      wickets:'',
+      chartDataChase: {},
+      chartDataToss: {},
+      chartOptions: {responsive: true, maintainAspectRatio: false}
     }
   },
   mounted() {
@@ -63,15 +66,62 @@ export default {
         update: function() {
           this.$http.get("https://chraman.github.io/ipl/static/json/iplStats.json").then(
             function(response) {
-                var stats = response.body
+                var stats = response.body.all_stats
+                var chasingWinsTeam = response.body.number_wins_chasing
                 this.matches = stats.matches
                 this.sixes = stats.sixes
                 this.runs = stats.runs
                 this.wickets = stats.wickets
-                console.log(stats)
+                console.log(tosswinPer)
+                var tosswinPer = response.body.toss_wins.true
+                tosswinPer = Math.round( tosswinPer * 10 ) / 10;
+                this.prepareTossChart(tosswinPer)
+                this.getChasingWins(chasingWinsTeam)
             }, function(error) {
                 console.log(error)
           });
+        },
+        getChasingWins: function(chasingWinsTeam) {
+          console.log(chasingWinsTeam)
+          var chaseingWins = 0;
+          for(var index = 0; index<chasingWinsTeam.length; index++) {
+            chaseingWins +=  chasingWinsTeam[index].count
+          }
+          console.log(chaseingWins)
+          var chasewinPer = (chaseingWins/this.matches)*100
+          chasewinPer = Math.round( chasewinPer * 10 ) / 10;
+          this.prepareChasingChart(chasewinPer)
+
+        },
+        prepareChasingChart: function(chasewinPer) {
+          this.chartDataChase = {
+                                  labels: ['Win', 'Loss'],
+                                  datasets: [
+                                    {
+                                      backgroundColor: [
+                                        '#41B883',
+                                        '#E46651'
+                                      ],
+                                      data: [chasewinPer, 100-chasewinPer]
+                                    }
+                                  ]
+                                }
+
+        },
+        prepareTossChart: function(tosswinPer) {
+          this.chartDataToss = {
+                                  labels: ['Win', 'Loss'],
+                                  datasets: [
+                                    {
+                                      backgroundColor: [
+                                        '#41B883',
+                                        '#E46651'
+                                      ],
+                                      data: [tosswinPer, 100-tosswinPer]
+                                    }
+                                  ]
+                                }
+
         }
     }
 
