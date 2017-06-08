@@ -184,5 +184,57 @@
          "total_runs": 0,
          "count": 715
       }
+   ],
+   "death_dots" : [
+   {
+      "bowler":"SL Malinga",
+      "total_runs":0,
+      "count":306
+   },
+   {
+      "bowler":"DJ Bravo",
+      "total_runs":0,
+      "count":243
+   },
+   {
+      "bowler":"SP Narine",
+      "total_runs":0,
+      "count":216
+   },
+   {
+      "bowler":"DW Steyn",
+      "total_runs":0,
+      "count":211
+   },
+   {
+      "bowler":"R Vinay Kumar",
+      "total_runs":0,
+      "count":163
+   },
+   {
+      "bowler":"SR Watson",
+      "total_runs":0,
+      "count":161
+   },
+   {
+      "bowler":"UT Yadav",
+      "total_runs":0,
+      "count":151
+   },
+   {
+      "bowler":"B Kumar",
+      "total_runs":0,
+      "count":148
+   },
+   {
+      "bowler":"RP Singh",
+      "total_runs":0,
+      "count":146
+   },
+   {
+      "bowler":"A Nehra",
+      "total_runs":0,
+      "count":145
+   }
    ]
 }

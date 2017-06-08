@@ -17,6 +17,10 @@
           </tr>
         </table>
 		</div>
+    <div class="col-lg12 col-md-12 col-sm-12 col-xs-12">
+    <h1>IPL teams runs percent</h1>
+       <doughnut-chart :chartData="chartDataTeamRuns" :options="chartOptions"></doughnut-chart>
+    </div>
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
       <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
         <h1>Does winning toss wins you the match?</h1>
@@ -37,9 +41,11 @@
 <script>
 import Vue from 'vue'
 import PieChart from '@/components/PieChart.js'
+import DoughnutChart from '@/components/DoughnutChart.js'
 import BowlerStats from '@/components/BowlerStats'
 import BatsmanStats from '@/components/BatsmanStats'
 Vue.component('pie-chart', PieChart)
+Vue.component('doughnut-chart', DoughnutChart)
 Vue.component('bowler-stats', BowlerStats)
 Vue.component('batsman-stats', BatsmanStats)
 
@@ -53,13 +59,13 @@ export default {
       sixes:'',
       runs:'',
       wickets:'',
+      chartDataTeamRuns: {},
       chartDataChase: {},
       chartDataToss: {},
       chartOptions: {responsive: true, maintainAspectRatio: false}
     }
   },
   mounted() {
-    console.log(this.msg)
     this.update()
   },
   methods: {
@@ -68,26 +74,25 @@ export default {
             function(response) {
                 var stats = response.body.all_stats
                 var chasingWinsTeam = response.body.number_wins_chasing
+                var totalTeamRuns = response.body.team_total_run
                 this.matches = stats.matches
                 this.sixes = stats.sixes
                 this.runs = stats.runs
                 this.wickets = stats.wickets
-                console.log(tosswinPer)
                 var tosswinPer = response.body.toss_wins.true
                 tosswinPer = Math.round( tosswinPer * 10 ) / 10;
                 this.prepareTossChart(tosswinPer)
+                this.prepareRunsChart(totalTeamRuns)
                 this.getChasingWins(chasingWinsTeam)
             }, function(error) {
                 console.log(error)
           });
         },
         getChasingWins: function(chasingWinsTeam) {
-          console.log(chasingWinsTeam)
           var chaseingWins = 0;
           for(var index = 0; index<chasingWinsTeam.length; index++) {
             chaseingWins +=  chasingWinsTeam[index].count
           }
-          console.log(chaseingWins)
           var chasewinPer = (chaseingWins/this.matches)*100
           chasewinPer = Math.round( chasewinPer * 10 ) / 10;
           this.prepareChasingChart(chasewinPer)
@@ -99,8 +104,8 @@ export default {
                                   datasets: [
                                     {
                                       backgroundColor: [
-                                        '#41B883',
-                                        '#E46651'
+                                        '#316395',
+                                        '#FF9900'
                                       ],
                                       data: [chasewinPer, 100-chasewinPer]
                                     }
@@ -114,14 +119,49 @@ export default {
                                   datasets: [
                                     {
                                       backgroundColor: [
-                                        '#41B883',
-                                        '#E46651'
+                                        
+                                                         '#109618',
+                                                          '#DC3912'
                                       ],
                                       data: [tosswinPer, 100-tosswinPer]
                                     }
                                   ]
                                 }
 
+        },
+        prepareRunsChart: function(totalTeamRuns) {
+          console.log(totalTeamRuns)
+          var  teams = []
+          var runsPer = []
+          for(var index=0;index<totalTeamRuns.length;index++) {
+            teams.push(totalTeamRuns[index].batting_team)
+            var runPer = (totalTeamRuns[index].count/this.runs)*100
+            runPer = Math.round( runPer * 10 ) / 10;
+            runsPer.push(runPer)
+          }
+          this.chartDataTeamRuns= {
+                                  labels: teams,
+                                  datasets: [
+                                    {
+                                      backgroundColor: [
+                                                          '#3366CC',
+                                                          '#DC3912',
+                                                          '#FF9900',
+                                                          '#109618',
+                                                          '#990099',
+                                                          '#3B3EAC',
+                                                          '#0099C6',
+                                                          '#DD4477',
+                                                          '#66AA00',
+                                                          '#B82E2E',
+                                                          '#316395',
+                                                          '#994499',
+                                                          '#22AA99'
+                                                        ],
+                                      data: runsPer
+                                    }
+                                  ]
+                                }
         }
     }
 

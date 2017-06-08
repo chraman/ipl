@@ -2,6 +2,9 @@
 <template>
 <div>
 <h1>Bowler Stats</h1>
+<div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8  col-sm-offset-2col-sm-8 col-xs-12">
+  <bar :chartData="chartDataWickets" :options="chartOptionsWickets"></bar>
+</div>
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
   <bar :chartData="chartDataDots" :options="chartOptionsDots"></bar>
 </div>

@@ -102,7 +102,6 @@ export default {
                 this.prepareLineChartData(this.teamA,this.teamB)
         },
         handleRunsByShots: function(runsByShots) {
-            console.log(runsByShots)
                 this.shots=new Set()
                 this.teamsShots= new Set()
                 for(var index=0;index<runsByShots.length;index++){
@@ -165,8 +164,6 @@ export default {
           var indexA,indexB
           this.teamShotsA = teamA
           this.teamShotsB = teamB
-          console.log(this.teamShotsA,this.teamShotsB)
-          console.log(this.dataSetsShots[10].data.length)
           for(var index=0;index<this.dataSets.length;index++){
             if(this.dataSetsShots[index].label==teamA) {
               indexA = index;
@@ -174,7 +171,6 @@ export default {
               indexB = index;
             }
           }
-          console.log(this.dataSetsShots[indexA].data)
           if(indexA == undefined || indexB == undefined){
             return;
           }
@@ -203,7 +199,6 @@ export default {
                           }
                       ]
               }
-              console.log(this.chartDataShots)
         }
     }
   }
