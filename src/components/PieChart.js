@@ -4,7 +4,8 @@
 
 
 import { VueCharts } from 'vue-chartjs'
-const { reactiveProp } = VueCharts.mixins
+const { reactiveProp } = VueCharts.mixins 
+console.log(VueCharts)
 export default VueCharts.Pie.extend({
  mixins: [reactiveProp],
   props: ['chartData', 'options'],

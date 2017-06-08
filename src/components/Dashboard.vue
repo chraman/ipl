@@ -18,7 +18,7 @@
         </table>
 		</div>
     <div class="col-lg12 col-md-12 col-sm-12 col-xs-12">
-    <h1>IPL teams runs percent</h1>
+    <h1>IPL teams run percentage</h1>
        <doughnut-chart :chartData="chartDataTeamRuns" :options="chartOptions"></doughnut-chart>
     </div>
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

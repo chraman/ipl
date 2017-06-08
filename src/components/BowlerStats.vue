@@ -2,14 +2,23 @@
 <template>
 <div>
 <h1>Bowler Stats</h1>
+<div class="row mr-0">
+<h2 class="pl-10">Highest wicket takers in IPL</h2>
 <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8  col-sm-offset-2col-sm-8 col-xs-12">
   <bar :chartData="chartDataWickets" :options="chartOptionsWickets"></bar>
 </div>
+</div>
+<div class="row mr-0">
+
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+<h2>Total Dots balls</h2>
   <bar :chartData="chartDataDots" :options="chartOptionsDots"></bar>
 </div>
+
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-  <bar :chartData="chartDataWickets" :options="chartOptionsWickets"></bar>
+<h2>Death Dot balls</h2>
+  <h-bar :chartData="chartDataDeath" :options="chartOptionsDeath"></h-bar>
+</div>
 </div>
 </div>
 </template>
@@ -18,7 +27,9 @@
 
 import Vue from 'vue'
 import BarChart from '@/components/BarChart.js'
+import HorizontalBarChart from '@/components/HorizontalBarChart.js'
 Vue.component('bar',BarChart)
+Vue.component('h-bar',HorizontalBarChart)
 export default {
   name: 'bowler-stats',
   data() {
@@ -26,7 +37,9 @@ export default {
       chartDataDots: {},
       chartOptionsDots: {},
       chartDataWickets: {},
-      chartOptionsWickets: {}
+      chartOptionsWickets: {},
+      chartDataDeath: {},
+      chartOptionsDeath: {}
     }
   },
   mounted() {
@@ -41,14 +54,19 @@ export default {
                 this.ballsDots = [];
                 this.bowlerWickets=[];
                 this.wickets=[];
+                this.bowlerDeathDots = []
+                this.ballsDeathDots = []
                 for(var i=0;i<5;i++) {
                   this.bowlersDots.push(players.dots[i].bowler);
                   this.ballsDots.push(players.dots[i].count);
                   this.bowlerWickets.push(players.wickets[i].bowler)
                   this.wickets.push(players.wickets[i].count)
+                  this.bowlerDeathDots.push(players.death_dots[i].bowler)
+                  this.ballsDeathDots.push(players.death_dots[i].count)
                 }
                 this.prepareChartDataDots(this.bowlersDots , this.ballsDots)
                 this.prepareChartDataWickets(this.bowlerWickets , this.wickets)
+                this.prepareChartDataDeathDots(this.bowlerDeathDots , this.ballsDeathDots)
             }, function(error) {
                 console.log(error)
           });
@@ -59,7 +77,7 @@ export default {
             datasets: [
             {
                 label: 'Dot balls',
-                backgroundColor: '#00D8FF',
+                backgroundColor: '#990099',
                 data: balls
             }
           ]
@@ -77,17 +95,45 @@ export default {
                 label: 'Wickets',
                 backgroundColor: '#7C8CF8',
                 data: wickets
-            }
+            },
+
           ]
         }
         this.chartOptionsWickets = {
             responsive: true, 
             maintainAspectRatio: false
         }
+        },
+        prepareChartDataDeathDots: function(bowlerDeathDots,ballsDeathDots) {
+          this.chartDataDeath = {
+            labels: bowlerDeathDots,
+            datasets: [
+            {
+                label: 'Death Dot Balls',
+                backgroundColor: '#22AA99',
+                data: ballsDeathDots
+            }
+          ]
         }
+        this.chartOptionsDeath = {
+            responsive: true, 
+            maintainAspectRatio: false
+        }
+        }
+
     }
   }
 </script>
 
+
 <style>
+.mr-0{
+  margin-right:0px !important;
+}
+.ml-0{
+  margin-left:0px !important;
+}
+.pl-10{
+  padding-left: 10px;
+}
 </style>
