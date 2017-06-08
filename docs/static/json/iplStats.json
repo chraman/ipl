@@ -1,63 +1,66 @@
 {
-	"all_stats":{
-				"matches": 577,
-				"sixes":   5817,
-				"fours":  15421,
-				"wickets": 6727,
-				"runs": 175528
-			},
-"number_wins_chasing": [
-   {
-      "index":"Royal Challengers Bangalore",
-      "count":42
-   },
-   {
-      "index":"Kolkata Knight Riders",
-      "count":39
-   },
-   {
-      "index":"Delhi Daredevils",
-      "count":38
-   },
-   {
-      "index":"Rajasthan Royals",
-      "count":38
-   },
-   {
-      "index":"Mumbai Indians",
-      "count":37
-   },
-   {
-      "index":"Chennai Super Kings",
-      "count":33
-   },
-   {
-      "index":"Kings XI Punjab",
-      "count":33
-   },
-   {
-      "index":"Sunrisers Hyderabad",
-      "count":15
-   },
-   {
-      "index":"Deccan Chargers",
-      "count":11
-   },
-   {
-      "index":"Gujarat Lions",
-      "count":8
-   },
-   {
-      "index":"Pune Warriors",
-      "count":6
-   },
-   {
-      "index":"Kochi Tuskers Kerala",
-      "count":4
-   },
-   {
-      "index":"Rising Pune Supergiants",
-      "count":3
-   }
-]
+	"all_stats": {
+		"matches": 577,
+		"sixes": 5817,
+		"fours": 15421,
+		"wickets": 6727,
+		"runs": 175528
+	},
+	"toss_wins": {
+		"true": 50.4332755633,
+		"false": 49.5667244367
+	},
+	"number_wins_chasing": [{
+			"index": "Royal Challengers Bangalore",
+			"count": 42
+		},
+		{
+			"index": "Kolkata Knight Riders",
+			"count": 39
+		},
+		{
+			"index": "Delhi Daredevils",
+			"count": 38
+		},
+		{
+			"index": "Rajasthan Royals",
+			"count": 38
+		},
+		{
+			"index": "Mumbai Indians",
+			"count": 37
+		},
+		{
+			"index": "Chennai Super Kings",
+			"count": 33
+		},
+		{
+			"index": "Kings XI Punjab",
+			"count": 33
+		},
+		{
+			"index": "Sunrisers Hyderabad",
+			"count": 15
+		},
+		{
+			"index": "Deccan Chargers",
+			"count": 11
+		},
+		{
+			"index": "Gujarat Lions",
+			"count": 8
+		},
+		{
+			"index": "Pune Warriors",
+			"count": 6
+		},
+		{
+			"index": "Kochi Tuskers Kerala",
+			"count": 4
+		},
+		{
+			"index": "Rising Pune Supergiants",
+			"count": 3
+		}
+	]
 }
