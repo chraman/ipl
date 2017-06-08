@@ -986,10 +986,6 @@
       "runs_by_season": 7080
    }, {
       "batting_team": "Chennai Super Kings",
-      "batsman_runs": 5,
-      "runs_by_season": 10
-   }, {
-      "batting_team": "Chennai Super Kings",
       "batsman_runs": 6,
       "runs_by_season": 4452
    }, 
@@ -1009,11 +1005,7 @@
       "batting_team": "Deccan Chargers",
       "batsman_runs": 4,
       "runs_by_season": 3828
-   }, {
-      "batting_team": "Deccan Chargers",
-      "batsman_runs": 5,
-      "runs_by_season": 25
-   }, {
+   },  {
       "batting_team": "Deccan Chargers",
       "batsman_runs": 6,
       "runs_by_season": 2400
@@ -1034,11 +1026,7 @@
       "batting_team": "Delhi Daredevils",
       "batsman_runs": 4,
       "runs_by_season": 7072
-   }, {
-      "batting_team": "Delhi Daredevils",
-      "batsman_runs": 5,
-      "runs_by_season": 20
-   }, {
+   },{
       "batting_team": "Delhi Daredevils",
       "batsman_runs": 6,
       "runs_by_season": 3594
@@ -1060,10 +1048,6 @@
       "runs_by_season": 968
    }, {
       "batting_team": "Gujarat Lions",
-      "batsman_runs": 5,
-      "runs_by_season": 0
-   },{
-      "batting_team": "Gujarat Lions",
       "batsman_runs": 6,
       "runs_by_season": 378
    }, {
@@ -1082,10 +1066,6 @@
       "batting_team": "Kings XI Punjab",
       "batsman_runs": 4,
       "runs_by_season": 7576
-   }, {
-      "batting_team": "Kings XI Punjab",
-      "batsman_runs": 5,
-      "runs_by_season": 30
    }, {
       "batting_team": "Kings XI Punjab",
       "batsman_runs": 6,
@@ -1108,10 +1088,6 @@
       "runs_by_season": 680
    },{
       "batting_team": "Kochi Tuskers Kerala",
-      "batsman_runs": 5,
-      "runs_by_season": 0
-   }, {
-      "batting_team": "Kochi Tuskers Kerala",
       "batsman_runs": 6,
       "runs_by_season": 318
    },  {
@@ -1130,11 +1106,7 @@
       "batting_team": "Kolkata Knight Riders",
       "batsman_runs": 4,
       "runs_by_season": 7000
-   }, {
-      "batting_team": "Kolkata Knight Riders",
-      "batsman_runs": 5,
-      "runs_by_season": 45
-   }, {
+   },  {
       "batting_team": "Kolkata Knight Riders",
       "batsman_runs": 6,
       "runs_by_season": 3432
@@ -1154,10 +1126,6 @@
       "batting_team": "Mumbai Indians",
       "batsman_runs": 4,
       "runs_by_season": 7680
-   }, {
-      "batting_team": "Mumbai Indians",
-      "batsman_runs": 5,
-      "runs_by_season": 35
    }, {
       "batting_team": "Mumbai Indians",
       "batsman_runs": 6,
@@ -1180,10 +1148,6 @@
       "runs_by_season": 2100
    }, {
       "batting_team": "Pune Warriors",
-      "batsman_runs": 5,
-      "runs_by_season": 10
-   }, {
-      "batting_team": "Pune Warriors",
       "batsman_runs": 6,
       "runs_by_season": 1176
    },  {
@@ -1202,11 +1166,7 @@
       "batting_team": "Rajasthan Royals",
       "batsman_runs": 4,
       "runs_by_season": 6520
-   }, {
-      "batting_team": "Rajasthan Royals",
-      "batsman_runs": 5,
-      "runs_by_season": 10
-   }, {
+   },{
       "batting_team": "Rajasthan Royals",
       "batsman_runs": 6,
       "runs_by_season": 3228
@@ -1226,10 +1186,6 @@
       "batting_team": "Rising Pune Supergiants",
       "batsman_runs": 4,
       "runs_by_season": 684
-   }, {
-      "batting_team": "Rising Pune Supergiants",
-      "batsman_runs": 5,
-      "runs_by_season": 0
    },{
       "batting_team": "Rising Pune Supergiants",
       "batsman_runs": 6,
@@ -1250,11 +1206,7 @@
       "batting_team": "Royal Challengers Bangalore",
       "batsman_runs": 4,
       "runs_by_season": 7380
-   }, {
-      "batting_team": "Royal Challengers Bangalore",
-      "batsman_runs": 5,
-      "runs_by_season": 20
-   }, {
+   },{
       "batting_team": "Royal Challengers Bangalore",
       "batsman_runs": 6,
       "runs_by_season": 5160
@@ -1274,11 +1226,7 @@
       "batting_team": "Sunrisers Hyderabad",
       "batsman_runs": 4,
       "runs_by_season": 3116
-   }, {
-      "batting_team": "Sunrisers Hyderabad",
-      "batsman_runs": 5,
-      "runs_by_season": 5
-   }, {
+   },{
       "batting_team": "Sunrisers Hyderabad",
       "batsman_runs": 6,
       "runs_by_season": 1764
