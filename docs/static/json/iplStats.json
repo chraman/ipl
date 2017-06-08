@@ -62,5 +62,59 @@
 			"index": "Rising Pune Supergiants",
 			"count": 3
 		}
-	]
+	],
+	"team_total_run": [
+   {
+      "batting_team":"Mumbai Indians",
+      "count":21721
+   },
+   {
+      "batting_team":"Royal Challengers Bangalore",
+      "count":21591
+   },
+   {
+      "batting_team":"Chennai Super Kings",
+      "count":20899
+   },
+   {
+      "batting_team":"Kings XI Punjab",
+      "count":20861
+   },
+   {
+      "batting_team":"Delhi Daredevils",
+      "count":19734
+   },
+   {
+      "batting_team":"Kolkata Knight Riders",
+      "count":19481
+   },
+   {
+      "batting_team":"Rajasthan Royals",
+      "count":17703
+   },
+   {
+      "batting_team":"Deccan Chargers",
+      "count":11463
+   },
+   {
+      "batting_team":"Sunrisers Hyderabad",
+      "count":9303
+   },
+   {
+      "batting_team":"Pune Warriors",
+      "count":6358
+   },
+   {
+      "batting_team":"Gujarat Lions",
+      "count":2450
+   },
+   {
+      "batting_team":"Rising Pune Supergiants",
+      "count":2063
+   },
+   {
+      "batting_team":"Kochi Tuskers Kerala",
+      "count":1901
+   }
+]
 }
