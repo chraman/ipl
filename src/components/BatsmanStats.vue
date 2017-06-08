@@ -3,9 +3,11 @@
 <div>
 <h1>Batsman Stats</h1>
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+  <h2 class="chart-heading">Most run scorer</h2>
   <bar :chartData="chartDataRuns" :options="chartOptionsRuns"></bar>
 </div>
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+  <h2 class="chart-heading">Most Sixes</h2>
   <bar :chartData="chartDataSixes" :options="chartOptionsSixexs"></bar>
 </div>
 </div>

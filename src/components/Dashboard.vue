@@ -4,10 +4,10 @@
 		  <div>
         <table class="table table-striped table-bordered">
           <tr class="table-header">
-            <th>Matches</th>
-            <th>Runs</th>
-            <th>Wickets</th>
-            <th>Sixes</th>
+            <th>{{ matchesLabel }}</th>
+            <th>{{ runsLabel }}</th>
+            <th>{{ wicketsLabel }}</th>
+            <th>{{ sixesLabel }}</th>
           </tr>
           <tr>
             <td>{{ matches }}</td>
@@ -17,22 +17,24 @@
           </tr>
         </table>
 		</div>
-    <div class="col-lg12 col-md-12 col-sm-12 col-xs-12">
-    <h1>IPL teams run percentage</h1>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pl-0 pr-0">
+    <div class="chart-bg mr-10 ml-10">
+    <h2 class="chart-heading">IPL team's run percentage</h2>
        <doughnut-chart :chartData="chartDataTeamRuns" :options="chartOptions"></doughnut-chart>
     </div>
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-      <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
-        <h1>Does winning toss wins you the match?</h1>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pl-0 pr-0">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pl-0 pr-0">
+        <div class="chart-bg mt-20 ml-10 mr-10">
+        <h2 class="chart-heading">Does winning toss wins you the match?</h2>
+          <pie-chart :chartData="chartDataToss" :options="chartOptions"></pie-chart>
+        </div>
       </div>
-      <div style="display:inline-block;" class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-        <pie-chart :chartData="chartDataToss" :options="chartOptions"></pie-chart>
-      </div>
-      <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12">
-        <h1>Or chasing target wins you the match?</h1>
-      </div>
-      <div style="display:inline-block;" class="col-lg-4 col-md-4 col-sm-6 col-xs-12 pt-20">
-        <pie-chart :chartData="chartDataChase" :options="chartOptions"></pie-chart>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pl-0 pr-0">
+        <div class="chart-bg mt-20 mr-10 ml-10">
+          <h2 class="chart-heading">Or chasing down target wins you the match?</h2>
+          <pie-chart :chartData="chartDataChase" :options="chartOptions"></pie-chart>
+        </div>
       </div>
     </div>
   </div>
@@ -59,6 +61,10 @@ export default {
       sixes:'',
       runs:'',
       wickets:'',
+      matchesLabel:'Matches',
+      sixesLabel:'Runs',
+      runsLabel:'Wickets',
+      wicketsLabel:'Sixes',
       chartDataTeamRuns: {},
       chartDataChase: {},
       chartDataToss: {},
@@ -203,5 +209,38 @@ a {
 }
 .pt-20{
   padding-top:20px;
+}
+.mr-0{
+  margin-right:0px !important;
+}
+.ml-0{
+  margin-left:0px !important;
+}
+.pr-0{
+  padding-right:0px !important;
+}
+.pl-0{
+  padding-left:0px !important;
+}
+.chart-bg{
+    background: beige;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+.width-pie{
+  width:45%;
+}
+.chart-heading{
+  text-align: center;
+}
+.mt-20{
+  margin-top:20px;
+}
+.mr-10{
+  margin-right:10px;
+}
+.ml-10{
+  margin-left:10px;
 }
 </style>

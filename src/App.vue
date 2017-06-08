@@ -18,10 +18,10 @@
     <div class="wrapper">
       <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 p-0">
       <ul class="form">
-        <li v-on:click="selectedTab=tabs[0]" v-bind:class="selectedTab==tabs[0] ? 'selected':''"><a class="tab1"><router-link to="/">Ipl Stats</router-link></a></li>
-        <li v-on:click="selectedTab=tabs[1]" v-bind:class="selectedTab==tabs[1] ? 'selected':''"><a class="tab2"><router-link to="/tab2">Bowler Stats</router-link></a></li>
-        <li v-on:click="selectedTab=tabs[2]" v-bind:class="selectedTab==tabs[2] ? 'selected':''"><a class="tab3"><router-link to="/tab3">Batsman Stats</router-link></a></li>
-        <li v-on:click="selectedTab=tabs[3]" v-bind:class="selectedTab==tabs[3] ? 'selected':''"><a class="tab4"><router-link to="/tab4">Team Stats</router-link></a></li>
+        <li v-on:click="selectedTab=tabs[0]" v-bind:class="selectedTab==tabs[0] ? 'selected':''"><a class="tab1"><router-link to="/">{{ tab1 }}</router-link></a></li>
+        <li v-on:click="selectedTab=tabs[1]" v-bind:class="selectedTab==tabs[1] ? 'selected':''"><a class="tab2"><router-link to="/tab2">{{ tab2 }}</router-link></a></li>
+        <li v-on:click="selectedTab=tabs[2]" v-bind:class="selectedTab==tabs[2] ? 'selected':''"><a class="tab3"><router-link to="/tab3">{{ tab3 }}</router-link></a></li>
+        <li v-on:click="selectedTab=tabs[3]" v-bind:class="selectedTab==tabs[3] ? 'selected':''"><a class="tab4"><router-link to="/tab4">{{ tab4 }}</router-link></a></li>
       </ul>
       </div>
       <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 p-0">
@@ -44,7 +44,11 @@ export default {
     return {
       heading: 'Dashboard',
       tabs: [],
-      selectedTab: ''
+      selectedTab: '',
+      tab1: 'Ipl Stats',
+      tab2: 'Bowler Stats',
+      tab3: 'Batsman Stats',
+      tab4: 'Team Stats'
     }
   },
   mounted() {

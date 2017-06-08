@@ -4,16 +4,17 @@
   <h1>Team Stats</h1>
   <div class="">
   <div class="row ml-0 mr-0">
+  <h2 class="chart-heading">Compare runs scored in all seasons by two team</h2>
   <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6 p-0 pt-55">
   <h3>Choose Team-A</h3>
   <div class="btn-group-vertical" role="group" >
-    <button @click="prepareLineChartData(team,teamB)" v-for="team in teamNames" type="button" class="btn btn-xs btn-default">{{team}}</button>
+    <button @click="prepareLineChartData(team,teamB)" v-for="team in teamNames" type="button" class="btn btn-xs btn-default btn-bg">{{team}}</button>
   </div>
   </div>
   <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6 p-0 pt-55" style="float:right">
   <h3>Choose Team-B</h3>
   <div class="btn-group-vertical group-small-screen" role="group" >
-    <button @click="prepareLineChartData(teamA,team)" v-for="team in teamNames" type="button" class="btn btn-xs btn-default">{{team}}</button>
+    <button @click="prepareLineChartData(teamA,team)" v-for="team in teamNames" type="button" class="btn btn-xs btn-default btn-bg">{{team}}</button>
   </div>
   </div>
   <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 p-0">
@@ -21,16 +22,17 @@
   </div>
   </div>
   <div class="row ml-0 mr-0">
+  <h2 class="chart-heading">Compare runs scored from different shots by two teams</h2>
   <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6 p-0 pt-55">
   <h3>Choose Team-A</h3>
   <div class="btn-group-vertical" role="group" >
-    <button @click="prepareRadarChartData(team,teamShotsB)" v-for="team in teamNames" type="button" class="btn btn-xs btn-default">{{team}}</button>
+    <button @click="prepareRadarChartData(team,teamShotsB)" v-for="team in teamNames" type="button" class="btn btn-xs btn-default btn-bg">{{team}}</button>
   </div>
   </div>
   <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6 p-0 pt-55" style="float:right">
   <h3>Choose Team-B</h3>
   <div class="btn-group-vertical group-small-screen" role="group" >
-    <button @click="prepareRadarChartData(teamShotsA,team)" v-for="team in teamNames" type="button" class="btn btn-xs btn-default">{{team}}</button>
+    <button @click="prepareRadarChartData(teamShotsA,team)" v-for="team in teamNames" type="button" class="btn btn-xs btn-default btn-bg">{{team}}</button>
   </div>
   </div>
   <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12 p-0">
@@ -216,5 +218,11 @@ export default {
 }
 .ml-0{
   margin-left:0px !important;
+}
+.chart-heading{
+  text-align: center;
+}
+.btn-bg{
+  background: beige;
 }
 </style>
