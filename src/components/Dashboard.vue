@@ -1,6 +1,6 @@
 <template>
   <div>
-      <h1>Tournament Stats</h1>
+      <h1 class="page-heading">Tournament Stats</h1>
 		  <div>
         <table class="table table-striped table-bordered">
           <tr class="table-header">
@@ -136,7 +136,6 @@ export default {
 
         },
         prepareRunsChart: function(totalTeamRuns) {
-          console.log(totalTeamRuns)
           var  teams = []
           var runsPer = []
           for(var index=0;index<totalTeamRuns.length;index++) {
@@ -243,4 +242,9 @@ a {
 .ml-10{
   margin-left:10px;
 }
+.page-heading{
+  text-align: center;;
+  margin-bottom: 20px;
+}
+
 </style>

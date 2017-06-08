@@ -162,8 +162,8 @@ ul.form {
       border-left:5px solid #cf2130;
   }
 
-  .form li a.logout {
-      border-left:5px solid #dde2d5;
+  .form li a.tab4 {
+      border-left:5px solid #19388A;
   } 
 
   .form li:first-child a:hover, .form li:first-child a {

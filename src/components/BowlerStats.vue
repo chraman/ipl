@@ -1,7 +1,7 @@
 
 <template>
 <div>
-<h1>Bowler Stats</h1>
+<h1 class="page-heading">Bowler Stats</h1>
 <div class="row mr-0">
 
 <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8  col-sm-offset-2 col-sm-8 col-xs-12">
@@ -153,5 +153,9 @@ export default {
 }
 .mt-20{
   margin-top:20px;
+}
+.page-heading{
+  text-align: center;;
+  margin-bottom: 20px;
 }
 </style>

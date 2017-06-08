@@ -1,7 +1,7 @@
 
 <template>
 <div>
-<h1>Batsman Stats</h1>
+<h1 class="page-heading">Batsman Stats</h1>
 <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8  col-sm-offset-2 col-sm-8 col-xs-12">
 <div class="chart-bg">
   <h2 class="chart-heading">Most runs in IPL</h2>
@@ -52,7 +52,6 @@ export default {
                 this.totalRuns = [];
                 this.batsmanSixes=[];
                 this.totalSixes=[];
-                console.log(players)
                 for(var i=0;i<5;i++) {
                   this.batsmanRuns.push(players.runs[i].batsman);
                   this.totalRuns.push(players.runs[i].count);
@@ -145,5 +144,9 @@ export default {
 }
 .mt-20{
   margin-top: 20px;
+}
+.page-heading{
+  text-align: center;;
+  margin-bottom: 20px;
 }
 </style>

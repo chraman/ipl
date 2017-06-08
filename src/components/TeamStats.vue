@@ -1,7 +1,7 @@
 
 <template>
 <div>
-  <h1>Team Stats</h1>
+  <h1 class="page-heading">Team Stats</h1>
   <div class="">
   <div class="row ml-0 mr-0">
   <h2 class="chart-heading">Compare runs scored in all seasons by two team</h2>
@@ -224,5 +224,9 @@ export default {
 }
 .btn-bg{
   background: beige;
+}
+.page-heading{
+  text-align: center;;
+  margin-bottom: 20px;
 }
 </style>
