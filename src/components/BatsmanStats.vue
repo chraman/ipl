@@ -2,13 +2,23 @@
 <template>
 <div>
 <h1>Batsman Stats</h1>
-<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-  <h2 class="chart-heading">Most run scorer</h2>
+<div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8  col-sm-offset-2 col-sm-8 col-xs-12">
+<div class="chart-bg">
+  <h2 class="chart-heading">Most runs in IPL</h2>
   <bar :chartData="chartDataRuns" :options="chartOptionsRuns"></bar>
 </div>
+</div>
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-  <h2 class="chart-heading">Most Sixes</h2>
+<div class="chart-bg mt-20">
+  <h2 class="chart-heading">Most sixes inIPL</h2>
   <bar :chartData="chartDataSixes" :options="chartOptionsSixexs"></bar>
+</div>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+<div class="chart-bg mt-20">
+  <h2 class="chart-heading">Death overs strike rate</h2>
+  <bar :chartData="chartDataStrike" :options="chartOptionsStrike"></bar>
+</div>
 </div>
 </div>
 </template>
@@ -25,7 +35,9 @@ export default {
       chartDataRuns: {},
       chartOptionsRuns: {},
       chartDataSixes: {},
-      chartOptionsSixexs: {}
+      chartDataStrike: {},
+      chartOptionsSixexs: {},
+      chartOptionsStrike: {}
     }
   },
   mounted() {
@@ -47,14 +59,29 @@ export default {
                   this.batsmanSixes.push(players.sixes[i].batsman)
                   this.totalSixes.push(players.sixes[i].count)
                 }
-                console.log(this.bowlers)
-                this.prepareChartDataDots(this.batsmanRuns , this.totalRuns)
-                this.prepareChartDataWickets(this.batsmanSixes , this.totalSixes)
+                this.deathRunsBatsman = []
+                this.deathStrikeRate = []
+                for(var index=0;index<5;index++){
+                  var batsmanInDeath = players.death_over_runs[index].batsman
+                  var runsDeath = players.death_over_runs[index].sum
+                  this.deathRunsBatsman.push(batsmanInDeath);
+                  for(var i=0; i<players.batsman_facing_death_over.length;i++) {
+                    if(players.batsman_facing_death_over[i].index == batsmanInDeath) {
+                      var balls= players.batsman_facing_death_over[i].count
+                      var sr = (runsDeath/balls)*100;
+                      sr = Math.round( sr * 10 ) / 10;
+                      this.deathStrikeRate.push(sr);
+                    }
+                  }
+                }
+                this.prepareChartDataRuns(this.batsmanRuns , this.totalRuns)
+                this.prepareChartDataSixes(this.batsmanSixes , this.totalSixes)
+                this.prepareChartDataDEathSR(this.deathRunsBatsman , this.deathStrikeRate)
             }, function(error) {
                 console.log(error)
           });
         },
-        prepareChartDataDots: function(batsman,runs) {
+        prepareChartDataRuns: function(batsman,runs) {
           this.chartDataRuns = {
             labels: batsman,
             datasets: [
@@ -70,18 +97,34 @@ export default {
             maintainAspectRatio: false
         }
         },
-        prepareChartDataWickets: function(batsman,sixes) {
+        prepareChartDataSixes: function(batsman,sixes) {
           this.chartDataSixes = {
             labels: batsman,
             datasets: [
             {
                 label: 'Sixes',
-                backgroundColor: '#f87979',
+                backgroundColor: '#990099',
                 data: sixes
             }
           ]
         }
         this.chartOptionsSixexs = {
+            responsive: true, 
+            maintainAspectRatio: false
+        }
+        },
+        prepareChartDataDEathSR: function(batsman,sr) {
+          this.chartDataStrike = {
+            labels: batsman,
+            datasets: [
+            {
+                label: 'Strike rate',
+                backgroundColor: '#329262',
+                data: sr
+            }
+          ]
+        }
+        this.chartOptionsStrike = {
             responsive: true, 
             maintainAspectRatio: false
         }
@@ -91,4 +134,16 @@ export default {
 </script>
 
 <style>
+.chart-heading{
+  text-align: center;
+}
+.chart-bg{
+    background: beige;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+.mt-20{
+  margin-top: 20px;
+}
 </style>

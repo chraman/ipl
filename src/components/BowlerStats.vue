@@ -4,7 +4,7 @@
 <h1>Bowler Stats</h1>
 <div class="row mr-0">
 
-<div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8  col-sm-offset-2col-sm-8 col-xs-12">
+<div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8  col-sm-offset-2 col-sm-8 col-xs-12">
 <div class="chart-bg">
   <h2 class="pl-10 chart-heading">Highest wicket takers in IPL</h2>
   <bar :chartData="chartDataWickets" :options="chartOptionsWickets"></bar>
@@ -15,13 +15,13 @@
 
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 <div class="chart-bg mt-20">
-<h2 class="chart-heading">Total Dots balls</h2>
+<h2 class="chart-heading">Total dots balls</h2>
   <bar :chartData="chartDataDots" :options="chartOptionsDots"></bar>
 </div>
 </div>
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 <div class="chart-bg mt-20">
-<h2 class="chart-heading">Death Dot balls</h2>
+<h2 class="chart-heading">Death overs dot balls</h2>
   <h-bar :chartData="chartDataDeath" :options="chartOptionsDeath"></h-bar>
 </div>
 </div>
