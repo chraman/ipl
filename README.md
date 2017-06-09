@@ -1,8 +1,8 @@
 # ipl-project
 
-> Analysis of ipl data
+> Analysis of IPL data based on performances by bowlers, batsman and teams with the help of different charts. Helps to compare performance between two teams, analysis of bowler and batsman performances in death overs and some amazing stats in the tournament.   
 
-##  List of libraies used in building this project
+##  List of libraries used in building this project
 
 * ### vue-cli
     * For building a simple vue application.
@@ -27,4 +27,8 @@
     * Served via HTTPS to prevent.
     * Offline usable.
 5. Offline Usable
-    * Allows you to use app if there is no internet connection.         
+    * Allows you to use app if there is no internet connection. 
+
+ 
+[App link](https://chraman.github.io/ipl/)
+
