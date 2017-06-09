@@ -73,6 +73,7 @@ export default {
                 this.handleTeamRuns(seasonsRunsTeam)
                 this.handleRunsByShots(runsByShots)
             }, function(error) {
+              //Todo Handle error
                 console.log(error)
           });
         },

@@ -1,0 +1,120 @@
+{
+	"all_stats": {
+		"matches": 577,
+		"sixes": 5817,
+		"fours": 15421,
+		"wickets": 6727,
+		"runs": 175528
+	},
+	"toss_wins": {
+		"true": 50.4332755633,
+		"false": 49.5667244367
+	},
+	"number_wins_chasing": [{
+			"index": "Royal Challengers Bangalore",
+			"count": 42
+		},
+		{
+			"index": "Kolkata Knight Riders",
+			"count": 39
+		},
+		{
+			"index": "Delhi Daredevils",
+			"count": 38
+		},
+		{
+			"index": "Rajasthan Royals",
+			"count": 38
+		},
+		{
+			"index": "Mumbai Indians",
+			"count": 37
+		},
+		{
+			"index": "Chennai Super Kings",
+			"count": 33
+		},
+		{
+			"index": "Kings XI Punjab",
+			"count": 33
+		},
+		{
+			"index": "Sunrisers Hyderabad",
+			"count": 15
+		},
+		{
+			"index": "Deccan Chargers",
+			"count": 11
+		},
+		{
+			"index": "Gujarat Lions",
+			"count": 8
+		},
+		{
+			"index": "Pune Warriors",
+			"count": 6
+		},
+		{
+			"index": "Kochi Tuskers Kerala",
+			"count": 4
+		},
+		{
+			"index": "Rising Pune Supergiants",
+			"count": 3
+		}
+	],
+	"team_total_run": [
+   {
+      "batting_team":"Mumbai Indians",
+      "count":21721
+   },
+   {
+      "batting_team":"Royal Challengers Bangalore",
+      "count":21591
+   },
+   {
+      "batting_team":"Chennai Super Kings",
+      "count":20899
+   },
+   {
+      "batting_team":"Kings XI Punjab",
+      "count":20861
+   },
+   {
+      "batting_team":"Delhi Daredevils",
+      "count":19734
+   },
+   {
+      "batting_team":"Kolkata Knight Riders",
+      "count":19481
+   },
+   {
+      "batting_team":"Rajasthan Royals",
+      "count":17703
+   },
+   {
+      "batting_team":"Deccan Chargers",
+      "count":11463
+   },
+   {
+      "batting_team":"Sunrisers Hyderabad",
+      "count":9303
+   },
+   {
+      "batting_team":"Pune Warriors",
+      "count":6358
+   },
+   {
+      "batting_team":"Gujarat Lions",
+      "count":2450
+   },
+   {
+      "batting_team":"Rising Pune Supergiants",
+      "count":2063
+   },
+   {
+      "batting_team":"Kochi Tuskers Kerala",
+      "count":1901
+   }
+]
+}
