@@ -223,7 +223,7 @@ export default {
   text-align: center;
 }
 .btn-bg{
-  background: beige;
+  background: beige !important;
 }
 .page-heading{
   text-align: center;;

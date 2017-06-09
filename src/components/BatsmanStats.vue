@@ -10,14 +10,14 @@
 </div>
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 <div class="chart-bg mt-20">
-  <h2 class="chart-heading">Most sixes inIPL</h2>
+  <h2 class="chart-heading">Most sixes in IPL</h2>
   <bar :chartData="chartDataSixes" :options="chartOptionsSixexs"></bar>
 </div>
 </div>
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 <div class="chart-bg mt-20">
   <h2 class="chart-heading">Death overs strike rate</h2>
-  <bar :chartData="chartDataStrike" :options="chartOptionsStrike"></bar>
+  <line-chart :chartData="chartDataStrike" :options="chartOptionsStrike"></line-chart>
 </div>
 </div>
 </div>
@@ -118,7 +118,9 @@ export default {
             datasets: [
             {
                 label: 'Strike rate',
-                backgroundColor: '#329262',
+                backgroundColor: 'rgba(50,146,98,0.3)',
+                pointBackgroundColor: 'rgba(50,146,98,1)',
+                borderColor: 'rgba(50,146,98,1)',
                 data: sr
             }
           ]
