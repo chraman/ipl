@@ -14,7 +14,7 @@
   		</div>
   	</div>
   </div>
-  <div v-if="tabs" class="row pt-20">
+  <div v-if="tabs" class="row pt-20 bg-tabs">
     <div class="wrapper">
       <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 p-0">
       <ul class="form">
@@ -80,8 +80,11 @@ export default {
     border-bottom-left-radius: 4px;
 }
 .panel-header {
-	background: #19388A;
-	    padding: 7px;
+    background-image: url('./assets/bgHead.jpg');
+    padding: 7px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .app-panel-heading{ 
 	background: white;
@@ -209,5 +212,10 @@ ul.form {
     padding: 20px;
     border-right: 5px solid #19388A;
   }
-  @media screen ()
+  .bg-tabs{
+    background-image: url('./assets/bgImage.png'),linear-gradient(0deg,rgba(0,0,0,.3),transparent);
+    background-size: cover;
+    background-position-y: bottom;
+    background-color: #0d1b47;
+  }
 </style>
